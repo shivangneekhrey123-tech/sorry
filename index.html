@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  overflow: hidden;
+}
+.page { display: none; height: 100vh; }
+.active { display: block; }
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#noBtn { position: absolute; }
+
+/* Bigger roses */
+.rose {
+  position: absolute;
+  font-size: 40px;
+  animation: fall 5s linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(-50px); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Collage styles */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.collage img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.collage img:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+  <h1>I'm Really Sorry ❤️</h1>
+  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="250">
+  <p>Please forgive me 🥺</p>
+  <button onclick="goToPage(2)">Yes 💖</button>
+  <button id="noBtn">No 😢</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <h1>You said YES 😍</h1>
+  <div id="roses"></div>
+
+  <!-- Photo Collage -->
+  <div class="collage">
+    <img src="1.jpeg">
+    <img src="2.jpeg">
+    <img src="4.jpeg">
+    <img src="3.jpeg">
+    <img src="6.jpeg">
+    <img src="5.jpeg">
+  </div>
+
+  <button onclick="goToPage(3)">Next ➡️</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <h1>My Promise ❤️</h1>
+  <p style="font-size:20px; max-width:600px; margin:auto;">
+    Sneha I'm truly sorry for my mistake I know I am wrong and Im doing hard to tell you but I really love you I really love the way you are mujhe aisa nhi bolna chhaiye tha ki tum hurt ho mujhe pta h bby mai tumhe baar baar hurt krta rhta hoon but believe me baby I will not do it ever again . This is the last time 
+    Im saying so cz iske baad se tumhe kbhi koi takleef nhi doonga no matter what Im here for you just for you I will do it again mai hmaare beech kisiko aane nhi dunga. Im trying hard to tell you baby how much I love you listen I dont want ki hmm or zyaada ladaai kre cz hmm ek dusre se hi to h baby agar hmm aise hi ladte 
+    rahenge to kaise chalega . Ab sneha this is the last time im saying so cause Im not doing anything again like this to hurt you no matter what . I will not shout no matter how much you are angry at me . I will not do this again Im designing this to make you forgive me. Probably a small gesture of this make you forgive me 
+    I know its tough for you and Im not the guy you want to live with Im not the guy whom you want to see future with, But baby Im the guy who see everything in you . I will give you the happiness which you deserve that's why I am attaching this song for you . 
+    
+    I LOVE YOU SO SO SO SO MUCH MY SWEETHEART . MY KATHERINE 💓👑
+  </p>
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="Navjot Ahuja - Khat (Lyrics).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function goToPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page' + page).classList.add('active');
+}
+
+// Moving NO button
+const noBtn = document.getElementById('noBtn');
+noBtn.addEventListener('mouseover', () => {
+  noBtn.style.top = Math.random() * 80 + 'vh';
+  noBtn.style.left = Math.random() * 80 + 'vw';
+});
+
+// Roses animation
+function createRose() {
+  const rose = document.createElement('div');
+  rose.innerHTML = '🌹';
+  rose.classList.add('rose');
+  rose.style.left = Math.random() * 100 + 'vw';
+  document.getElementById('roses').appendChild(rose);
+  setTimeout(() => rose.remove(), 5000);
+}
+setInterval(createRose, 300);
+
+// Ensure music plays after interaction
+ document.body.addEventListener('click', () => {
+  const music = document.getElementById('bgMusic');
+  music.play().catch(() => {});
+});
+</script>
+
+</body>
+</html>
