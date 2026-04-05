@@ -12,7 +12,9 @@ body {
   background: linear-gradient(to right, #ff9a9e, #fad0c4);
   overflow: hidden;
 }
-.page { display: none; height: 100vh; }
+.page { display: none; height: 100vh; overflow: hidden; }
+/* Allow scroll on last page */
+#page3 { overflow-y: auto; padding-bottom: 50px; }
 .active { display: block; }
 button {
   padding: 10px 20px;
@@ -73,12 +75,12 @@ button {
 
   <!-- Photo Collage -->
   <div class="collage">
-    <img src="1.jpeg">
-    <img src="2.jpeg">
-    <img src="4.jpeg">
-    <img src="3.jpeg">
-    <img src="6.jpeg">
-    <img src="5.jpeg">
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
   </div>
 
   <button onclick="goToPage(3)">Next ➡️</button>
@@ -86,38 +88,19 @@ button {
 
 <!-- PAGE 3 -->
 <div id="page3" class="page">
+  <div style="max-width:700px; margin:auto; padding:20px;">
   <h1>My Promise ❤️</h1>
   <p style="font-size:20px; max-width:600px; margin:auto;">
-    Sneha I'm truly sorry for my mistake I know I am wrong and Im doing hard to tell you but I really love you I really love the way you are mujhe aisa nhi bolna chhaiye tha ki tum hurt ho mujhe pta h bby mai tumhe baar baar hurt krta rhta hoon but believe me baby I will not do it ever again . This is the last time 
-    Im saying so cz iske baad se tumhe kbhi koi takleef nhi doonga no matter what Im here for you just for you I will do it again mai hmaare beech kisiko aane nhi dunga. Im trying hard to tell you baby how much I love you listen I dont want ki hmm or zyaada ladaai kre cz hmm ek dusre se hi to h baby agar hmm aise hi ladte 
-    rahenge to kaise chalega . Ab sneha this is the last time im saying so cause Im not doing anything again like this to hurt you no matter what . I will not shout no matter how much you are angry at me . I will not do this again Im designing this to make you forgive me. Probably a small gesture of this make you forgive me 
-    I know its tough for you and Im not the guy you want to live with Im not the guy whom you want to see future with, But baby Im the guy who see everything in you . I will give you the happiness which you deserve that's why I am attaching this song for you . 
-    I don’t know if words will ever be enough to truly express how much you mean to me, but I still want to try—because you deserve to know how deeply I care about you.
-
-From the moment you came into my life, everything started to feel different… better, warmer, more meaningful. You are not just someone I love, you are someone I cherish in every possible way. Your smile has the power to fix my worst days, and your presence alone makes everything feel right.
-
-I know I made a mistake, and I’m truly sorry for hurting you. It was never my intention to make you feel anything less than loved, respected, and valued. If I could go back and change that moment, I would without a second thought. But since I can’t, all I can do is promise you that I will learn from it and become better—for you, and for us.
-
-You are the most beautiful part of my life, not just because of how you look, but because of who you are. Your kindness, your heart, your way of caring—it inspires me every single day. And I want to be someone who deserves you, someone who makes you feel safe, happy, and truly loved.
-
-I don’t just love you in words, I love you in the way I think about you constantly, in the way I want to grow with you, and in the way I see my future with you in it. I want to stand by you in your happiest moments and your hardest ones. I want to be the person you can always rely on, no matter what.
-
-I promise I will try harder, listen better, and love you in the way you truly deserve. Not just today, but every day.
-
-Because losing you is something I can’t even imagine… and loving you is something I will never stop doing.
-
-❤️
-
-
-
-    
-    I LOVE YOU SO SO SO SO MUCH MY SWEETHEART . MY KATHERINE 💓👑
+    I am truly sorry for my mistake. I never wanted to hurt you.
+    I promise I will learn from this and never repeat it again.
+    You mean everything to me, and I will always respect your feelings.
   </p>
+  </div>
 </div>
 
 <!-- Background Music -->
 <audio id="bgMusic" autoplay loop>
-  <source src="Navjot Ahuja - Khat (Lyrics).mp3" type="audio/mpeg">
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
 </audio>
 
 <script>
